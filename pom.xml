@@ -65,6 +65,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+			 <finalName>spring_backend_git_hub_action_img </finalName>
 	</build>
 
 </project>

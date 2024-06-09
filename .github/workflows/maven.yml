@@ -35,7 +35,7 @@ jobs:
         with:
           image: vijaygaikwaddochub/spring_backend_git_hub_action_img
           registry: docker.io
-          dockerfile: /Dockerfile
+          dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 

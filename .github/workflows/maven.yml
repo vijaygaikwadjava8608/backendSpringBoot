@@ -33,7 +33,7 @@ jobs:
       - name: Build and Push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: vijaygaikwaddochub/spring_backend_git_hub_action_img
+          image: vijaygaikwaddochub/spring_backend_git_hub_action_img:springboot
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -43,7 +43,7 @@ jobs:
     runs-on: [aws-ec2]
     steps:
       - name: Pull the image from docker hub
-        run: docker pull vijaygaikwaddochub/spring_backend_git_hub_action_img:master
+        run: docker pull vijaygaikwaddochub/spring_backend_git_hub_action_img:springboot
       - name: delete old container
         run: docker rm -f springbootbackend-container
       - name: Run docker container

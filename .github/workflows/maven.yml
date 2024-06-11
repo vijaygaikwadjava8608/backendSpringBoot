@@ -43,7 +43,7 @@ jobs:
     runs-on: [aws-ec2]
     steps:
       - name: Pull the image from docker hub
-        run: docker pull vijaygaikwaddochub/spring_backend_git_hub_action_img
+        run: docker pull vijaygaikwaddochub/spring_backend_git_hub_action_img:master
       - name: delete old container
         run: docker rm -f springbootbackend-container
       - name: Run docker container

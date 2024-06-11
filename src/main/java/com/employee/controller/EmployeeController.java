@@ -3,6 +3,7 @@ package com.employee.controller;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,6 +39,11 @@ public class EmployeeController {
     public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable("id") Long employeeId) {
         EmployeeDTO employeeDTO = employeeService.getEmployeeById(employeeId);
         return new ResponseEntity<>(employeeDTO, HttpStatus.OK);
+    }
+
+    @GetMapping("/hello")
+    public ResponseEntity<String> getHello() {
+        return new ResponseEntity<String>("Hello From Vijay", HttpStatus.OK);
     }
 
     // Build Get All Employees REST API

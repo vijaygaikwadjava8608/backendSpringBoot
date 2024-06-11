@@ -33,7 +33,7 @@ jobs:
       - name: Build and Push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: vijaygaikwaddochub/spring_backend_git_hub_action_img
+          image: vijaygaikwaddochub/spring_backend_git_hub_action_img:latest
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
